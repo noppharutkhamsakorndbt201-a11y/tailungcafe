@@ -4,7 +4,6 @@ export default function Hero() {
   return (
     <header className="relative text-white py-24 md:py-32 overflow-hidden h-[60vh] md:h-[70vh] flex items-center justify-center" style={{ background: "#3E2430" }}>
       
-      {/* 1. วิดีโอพื้นหลัง */}
       <video
         autoPlay
         loop
@@ -12,15 +11,12 @@ export default function Hero() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover z-0"
       >
-        {/* เรียกใช้ไฟล์วิดีโอจากโฟลเดอร์ public */}
         <source src="/hero-bg.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
-      {/* 2. Overlay แผ่นสีดำโปร่งแสงซ้อนทับ เพื่อให้ตัวอักษรอ่านง่ายขึ้น */}
       <div className="absolute inset-0 z-10" style={{ background: "rgba(62,36,48,0.60)" }}></div>
       
-      {/* 3. ส่วนเนื้อหาข้อความ */}
       <div className="relative z-20 max-w-4xl mx-auto px-4 text-center space-y-6">
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight drop-shadow-md" style={{ color: "#FFF8F2" }}>
           Tailung Cafe
@@ -44,4 +40,4 @@ export default function Hero() {
     </header>
   );
 }
-
+

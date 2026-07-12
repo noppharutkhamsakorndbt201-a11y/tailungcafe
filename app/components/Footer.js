@@ -22,20 +22,17 @@ const featuresData = [
 export default function Footer() {
   return (
     <>
-      {/* Feature Section (3 การ์ดจุดเด่นร้าน) */}
       <section id="features" className="max-w-6xl mx-auto px-4 py-20" style={{ borderTop: "1px solid #C68A52" }}>
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-2" style={{ color: "#3E2430" }}>Why Tailung Cafe?</h2>
           <p className="text-sm" style={{ color: "#7D5438" }}>สิ่งที่เราตั้งใจมอบให้คุณในทุกๆ วัน</p>
         </div>
 
-        {/* ใช้ .map วนลูปแสดงผลการ์ดตามเกณฑ์บังคับ */}
         <div className="grid md:grid-cols-3 gap-8">
           {featuresData.map((feat) => (
             <div key={feat.id} className="p-8 rounded-2xl shadow-sm text-center flex flex-col items-center space-y-4"
               style={{ background: "#FFF8F2", border: "1px solid #C68A52" }}
             >
-              {/* เปลี่ยนจาก Emoji เป็นแท็ก <img> สำหรับแสดงรูปภาพโลโก้จุดเด่น */}
               <img 
                 src={feat.image} 
                 alt={feat.title} 
@@ -49,7 +46,6 @@ export default function Footer() {
         </div>
       </section>
 
-      {/* Footer ข้อมูลติดต่อ */}
       <footer id="contact" style={{ background: "#3E2430", borderTop: "1px solid #7D5438", color: "#F5DEC0" }}>
         <div className="max-w-6xl mx-auto px-4 py-12 grid md:grid-cols-3 gap-8 text-sm">
           <div className="space-y-3">
@@ -82,4 +78,4 @@ export default function Footer() {
     </>
   );
 }
-
+

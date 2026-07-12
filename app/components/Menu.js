@@ -17,7 +17,6 @@ export default function Menu() {
         <div className="h-1 w-12 mx-auto rounded" style={{ background: "#C68A52" }}></div>
       </div>
 
-      {/* วนลูปสร้าง MenuCard โดยใช้ .map() และระบุ key เป็น id */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {menuData.map((item) => (
           <MenuCard 
@@ -31,4 +30,4 @@ export default function Menu() {
       </div>
     </section>
   );
-}
+}
