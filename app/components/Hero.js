@@ -1,0 +1,41 @@
+export default function Hero() {
+  return (
+    <header className="relative bg-stone-900 text-white py-24 md:py-32 overflow-hidden h-[60vh] md:h-[70vh] flex items-center justify-center">
+      
+      {/* 1. วิดีโอพื้นหลัง */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      >
+        {/* เรียกใช้ไฟล์วิดีโอจากโฟลเดอร์ public */}
+        <source src="/hero-bg.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* 2. Overlay แผ่นสีดำโปร่งแสงซ้อนทับ เพื่อให้ตัวอักษรอ่านง่ายขึ้น */}
+      <div className="absolute inset-0 bg-black/50 z-10"></div>
+      
+      {/* 3. ส่วนเนื้อหาข้อความ */}
+      <div className="relative z-20 max-w-4xl mx-auto px-4 text-center space-y-6">
+        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-amber-100 drop-shadow-md">
+          Tailung Cafe
+        </h1>
+        <p className="text-lg md:text-xl text-stone-200 max-w-2xl mx-auto font-light leading-relaxed drop-shadow">
+          สัมผัสความอบอุ่นในทุกจิบ กับกาแฟระดับพรีเมียมและบรรยากาศที่ทำให้คุณรู้สึกเหมือนอยู่บ้าน
+        </p>
+        <div className="pt-4">
+          <a 
+            href="#menu" 
+            className="inline-block bg-amber-600 hover:bg-amber-700 text-white font-medium px-8 py-3 rounded-full shadow-lg transition-all transform hover:-translate-y-0.5"
+          >
+            ดูเมนูของเรา
+          </a>
+        </div>
+      </div>
+
+    </header>
+  );
+}
