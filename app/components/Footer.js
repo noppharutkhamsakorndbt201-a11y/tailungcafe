@@ -23,48 +23,51 @@ export default function Footer() {
   return (
     <>
       {/* Feature Section (3 การ์ดจุดเด่นร้าน) */}
-      <section id="features" className="max-w-6xl mx-auto px-4 py-20 border-t border-stone-200">
+      <section id="features" className="max-w-6xl mx-auto px-4 py-20" style={{ borderTop: "1px solid #C68A52" }}>
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-stone-950 mb-2">Why Tailung Cafe?</h2>
-          <p className="text-stone-500 text-sm">สิ่งที่เราตั้งใจมอบให้คุณในทุกๆ วัน</p>
+          <h2 className="text-3xl font-bold mb-2" style={{ color: "#3E2430" }}>Why Tailung Cafe?</h2>
+          <p className="text-sm" style={{ color: "#7D5438" }}>สิ่งที่เราตั้งใจมอบให้คุณในทุกๆ วัน</p>
         </div>
 
         {/* ใช้ .map วนลูปแสดงผลการ์ดตามเกณฑ์บังคับ */}
         <div className="grid md:grid-cols-3 gap-8">
           {featuresData.map((feat) => (
-            <div key={feat.id} className="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm text-center flex flex-col items-center space-y-4">
+            <div key={feat.id} className="p-8 rounded-2xl shadow-sm text-center flex flex-col items-center space-y-4"
+              style={{ background: "#FFF8F2", border: "1px solid #C68A52" }}
+            >
               {/* เปลี่ยนจาก Emoji เป็นแท็ก <img> สำหรับแสดงรูปภาพโลโก้จุดเด่น */}
               <img 
                 src={feat.image} 
                 alt={feat.title} 
-                className="w-70 h-70 object-cover shadow-sm bg-stone-50"
+                className="w-70 h-70 object-cover shadow-sm"
+                style={{ background: "#FFF8F2" }}
               />
-              <h3 className="text-xl font-bold text-stone-900 pt-2">{feat.title}</h3>
-              <p className="text-stone-500 text-sm leading-relaxed">{feat.description}</p>
+              <h3 className="text-xl font-bold pt-2" style={{ color: "#3E2430" }}>{feat.title}</h3>
+              <p className="text-sm leading-relaxed" style={{ color: "#7D5438" }}>{feat.description}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* Footer ข้อมูลติดต่อ */}
-      <footer id="contact" className="bg-stone-900 text-stone-400 border-t border-stone-800">
+      <footer id="contact" style={{ background: "#3E2430", borderTop: "1px solid #7D5438", color: "#F5DEC0" }}>
         <div className="max-w-6xl mx-auto px-4 py-12 grid md:grid-cols-3 gap-8 text-sm">
           <div className="space-y-3">
-            <h4 className="text-white font-semibold text-base tracking-wider">LOCATION</h4>
+            <h4 className="font-semibold text-base tracking-wider" style={{ color: "#FFF8F2" }}>LOCATION</h4>
             <p className="leading-relaxed">
               123 ถนนสุขุมวิท แขวงคลองเตย <br />
               เขตคลองเตย กรุงเทพมหานคร 10110
             </p>
           </div>
           <div className="space-y-3">
-            <h4 className="text-white font-semibold text-base tracking-wider">OPENING HOURS</h4>
+            <h4 className="font-semibold text-base tracking-wider" style={{ color: "#FFF8F2" }}>OPENING HOURS</h4>
             <p className="leading-relaxed">
               วันจันทร์ - วันศุกร์: 07:00 น. - 17:00 น. <br />
               วันเสาร์ - วันอาทิตย์: 08:00 น. - 18:00 น.
             </p>
           </div>
           <div className="space-y-3">
-            <h4 className="text-white font-semibold text-base tracking-wider">CONTACT</h4>
+            <h4 className="font-semibold text-base tracking-wider" style={{ color: "#FFF8F2" }}>CONTACT</h4>
             <p className="leading-relaxed">
               โทร: 089-XXX-XXXX <br />
               Email: hello@tailungcafe.com <br />
@@ -72,10 +75,11 @@ export default function Footer() {
             </p>
           </div>
         </div>
-        <div className="border-t border-stone-800/60 py-6 text-center text-xs text-stone-600">
+        <div className="py-6 text-center text-xs" style={{ borderTop: "1px solid #7D5438", color: "#C68A52" }}>
           © {new Date().getFullYear()} Tailung Cafe. All rights reserved.
         </div>
       </footer>
     </>
   );
 }
+

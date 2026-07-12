@@ -13,8 +13,8 @@ export default function Menu() {
   return (
     <section id="menu" className="max-w-6xl mx-auto px-4 py-20">
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold text-stone-950 mb-2">Our Menu</h2>
-        <div className="h-1 w-12 bg-amber-600 mx-auto rounded"></div>
+        <h2 className="text-3xl font-bold mb-2" style={{ color: "#3E2430" }}>Our Menu</h2>
+        <div className="h-1 w-12 mx-auto rounded" style={{ background: "#C68A52" }}></div>
       </div>
 
       {/* วนลูปสร้าง MenuCard โดยใช้ .map() และระบุ key เป็น id */}
@@ -31,4 +31,4 @@ export default function Menu() {
       </div>
     </section>
   );
-}
+}

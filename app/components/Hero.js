@@ -1,6 +1,8 @@
+'use client';
+
 export default function Hero() {
   return (
-    <header className="relative bg-stone-900 text-white py-24 md:py-32 overflow-hidden h-[60vh] md:h-[70vh] flex items-center justify-center">
+    <header className="relative text-white py-24 md:py-32 overflow-hidden h-[60vh] md:h-[70vh] flex items-center justify-center" style={{ background: "#3E2430" }}>
       
       {/* 1. วิดีโอพื้นหลัง */}
       <video
@@ -16,20 +18,23 @@ export default function Hero() {
       </video>
 
       {/* 2. Overlay แผ่นสีดำโปร่งแสงซ้อนทับ เพื่อให้ตัวอักษรอ่านง่ายขึ้น */}
-      <div className="absolute inset-0 bg-black/50 z-10"></div>
+      <div className="absolute inset-0 z-10" style={{ background: "rgba(62,36,48,0.60)" }}></div>
       
       {/* 3. ส่วนเนื้อหาข้อความ */}
       <div className="relative z-20 max-w-4xl mx-auto px-4 text-center space-y-6">
-        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-amber-100 drop-shadow-md">
+        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight drop-shadow-md" style={{ color: "#FFF8F2" }}>
           Tailung Cafe
         </h1>
-        <p className="text-lg md:text-xl text-stone-200 max-w-2xl mx-auto font-light leading-relaxed drop-shadow">
+        <p className="text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed drop-shadow" style={{ color: "#F5DEC0" }}>
           สัมผัสความอบอุ่นในทุกจิบ กับกาแฟระดับพรีเมียมและบรรยากาศที่ทำให้คุณรู้สึกเหมือนอยู่บ้าน
         </p>
         <div className="pt-4">
           <a 
             href="#menu" 
-            className="inline-block bg-amber-600 hover:bg-amber-700 text-white font-medium px-8 py-3 rounded-full shadow-lg transition-all transform hover:-translate-y-0.5"
+            className="inline-block font-medium px-8 py-3 rounded-full shadow-lg transition-all transform hover:-translate-y-0.5"
+            style={{ background: "#C68A52", color: "#FFF8F2" }}
+            onMouseEnter={e => e.currentTarget.style.background = "#7D5438"}
+            onMouseLeave={e => e.currentTarget.style.background = "#C68A52"}
           >
             ดูเมนูของเรา
           </a>
@@ -39,3 +44,4 @@ export default function Hero() {
     </header>
   );
 }
+
